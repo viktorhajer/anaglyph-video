@@ -1,0 +1,55 @@
+canvas {
+  border: 1px solid lightgray;
+  max-width: 100%;
+  max-height: calc(100vh - 100px);
+  position: fixed;
+  top: calc(40vh - 240px);
+  left: calc(50vw - 320px);
+  padding: 20px;
+  background: white;
+
+  &#canvasRight {
+    // left: 200px;
+  }
+
+  &#canvasLeft {
+    z-index: 10;
+    opacity: 0.5;
+  }
+}
+
+#form {
+  margin: 10px;
+
+  .inputField {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+
+    div {
+      width: 70px;
+      font-weight: bold;
+    }
+
+    select {
+      padding: 5px;
+    }
+  }
+
+  .actions {
+    button {
+      padding: 5px 10px;
+      width: 70px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 2px solid #dfdfdf;
+      font-weight: bold;
+      background: white;
+    }
+    button:first-child {
+      margin-right: 10px;
+    }
+  }
+}
+
+

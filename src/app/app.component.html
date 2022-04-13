@@ -1,0 +1,29 @@
+
+<div *ngIf="ready" id="form">
+
+  <div class="inputField">
+    <div>Left: </div>
+    <select [(ngModel)]="cameraLeftIndex">
+      <option *ngFor="let device of devices" [value]="device.index">
+        {{ device.label }}
+      </option>
+    </select>
+  </div>
+
+  <div class="inputField">
+    <div>Right: </div>
+    <select [(ngModel)]="cameraRightIndex">
+      <option *ngFor="let device of devices" [value]="device.index">
+        {{ device.label }}
+      </option>
+    </select>
+  </div>
+
+  <div class="actions">
+    <button (click)="init()">Init</button>
+    <button (click)="toggleStart()" *ngIf="initialized">{{ canvasService.running ? 'Stop' : 'Start' }}</button>
+  </div>
+</div>
+
+<canvas id="canvasLeft"></canvas>
+<canvas id="canvasRight"></canvas>
