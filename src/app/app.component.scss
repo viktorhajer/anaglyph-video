@@ -1,12 +1,13 @@
+#canvas_container {
+  display: flex;
+  justify-content: center;
+}
 canvas {
   border: 1px solid lightgray;
-  max-width: 100%;
-  max-height: calc(100vh - 100px);
-  position: fixed;
-  top: calc(40vh - 240px);
-  left: calc(50vw - 320px);
+  position: absolute;
   padding: 20px;
   background: white;
+  filter: brightness(1.5);
 
   &#canvasRight {
     // left: 200px;
@@ -20,14 +21,16 @@ canvas {
 
 #form {
   margin: 10px;
+  display: flex;
+  align-items: center;
 
   .inputField {
-    margin: 10px 0;
+    margin: 10px;
     display: flex;
     align-items: center;
 
     div {
-      width: 70px;
+      margin: 0 10px;
       font-weight: bold;
     }
 
